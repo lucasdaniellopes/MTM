@@ -1,0 +1,264 @@
+:root {
+    --primary-bg: #15171E;
+    --secondary-bg: #1E2028;
+    --accent-color: #FF4E50;
+    --accent-hover: #FF6B6D;
+    --highlight: #FF8F6B;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B8B8B8;
+    --card-bg: #272A35;
+    --bg-secondary: #272A35;
+    --border-color: rgba(255, 78, 80, 0.1);
+}
+
+body {
+    background-color: var(--primary-bg) !important;
+    color: var(--text-primary) !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.navbar {
+    background-color: var(--secondary-bg) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 78, 80, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card {
+    background-color: var(--card-bg) !important;
+    border: 1px solid rgba(255, 78, 80, 0.1) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background-color: rgba(255, 78, 80, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 78, 80, 0.1) !important;
+    padding: 1.25rem;
+    color: var(--text-primary);
+}
+
+.form-select, .form-control {
+    background-color: var(--secondary-bg) !important;
+    border: 1px solid rgba(255, 78, 80, 0.2) !important;
+    color: var(--text-primary) !important;
+    border-radius: 8px;
+}
+
+.form-select:focus, .form-control:focus {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 78, 80, 0.25) !important;
+}
+
+.btn-primary {
+    background-color: var(--accent-color) !important;
+    border: none !important;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 78, 80, 0.3);
+}
+
+.btn-primary:disabled {
+    background-color: rgba(255, 78, 80, 0.5) !important;
+    cursor: not-allowed;
+}
+
+.room-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.room-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.position-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+    filter: brightness(0) invert(1);
+}
+
+.elo-badge {
+    padding: 0.35em 0.65em;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    font-size: 0.875em;
+    text-transform: uppercase;
+}
+
+.elo-iron {
+    background: linear-gradient(45deg, #6e6e6e, #8a8a8a);
+    color: white;
+}
+
+.elo-bronze {
+    background: linear-gradient(45deg, #cd7f32, #e9967a);
+    color: white;
+}
+
+.elo-silver {
+    background: linear-gradient(45deg, #c0c0c0, #e8e8e8);
+    color: #333;
+}
+
+.elo-gold {
+    background: linear-gradient(45deg, #ffd700, #ffa500);
+    color: #333;
+}
+
+.elo-platinum {
+    background: linear-gradient(45deg, #00ffba, #00bfa5);
+    color: white;
+}
+
+.elo-diamond {
+    background: linear-gradient(45deg, #b9f2ff, #00bcd4);
+    color: white;
+}
+
+.elo-master {
+    background: linear-gradient(45deg, #ff00ff, #b300b3);
+    color: white;
+}
+
+.elo-grandmaster {
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+    color: white;
+}
+
+.elo-challenger {
+    background: linear-gradient(45deg, #00a8ff, #0072ff);
+    color: white;
+}
+
+.elo-emerald {
+    background-color: #50C878;
+    color: white;
+}
+
+/* Cores dos ranks com melhor contraste */
+.rank-iron { color: #a8a8a8; }
+.rank-bronze { color: #ff9c5b; }
+.rank-silver { color: #e5e5e5; }
+.rank-gold { color: #ffd700; }
+.rank-platinum { color: #00ffd8; }
+.rank-diamond { color: #40e0ff; }
+.rank-master { color: #ff9aff; }
+.rank-grandmaster { color: #ff6b6b; }
+.rank-challenger { color: #00ccff; }
+
+/* Títulos das seções de rank */
+.rank-title {
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+/* Valores dos ranks */
+#solo-rank, #flex-rank {
+    color: #40e0ff; /* Cor padrão mais clara e vibrante */
+    font-weight: 500;
+    text-shadow: 0 0 10px rgba(64, 224, 255, 0.3); /* Leve brilho para destaque */
+}
+
+.client-status {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.client-connected {
+    background-color: rgba(40, 167, 69, 0.2);
+    color: #4ade80 !important;
+}
+
+.client-disconnected {
+    background-color: rgba(255, 78, 80, 0.2);
+    color: var(--accent-color) !important;
+}
+
+/* Modal styling */
+.modal-content {
+    background-color: var(--card-bg) !important;
+    border: 1px solid rgba(255, 78, 80, 0.1);
+    border-radius: 12px;
+    color: var(--text-primary);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 78, 80, 0.1);
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(255, 78, 80, 0.1);
+    padding: 1.5rem;
+}
+
+.form-check-input {
+    background-color: var(--secondary-bg);
+    border-color: rgba(255, 78, 80, 0.2);
+}
+
+.form-check-input:checked {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.form-check-label {
+    color: var(--text-primary);
+}
+
+/* Form labels */
+.form-label {
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Text colors */
+.text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+.text-highlight {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Button close */
+.btn-close-white {
+    filter: brightness(0) invert(1);
+}
+
+/* Summoner info */
+#summoner-info {
+    background-color: rgba(255, 78, 80, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
